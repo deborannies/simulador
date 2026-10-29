@@ -13,6 +13,7 @@ import { rodarSimulacao, perguntarTutor } from './core/api.js';
 import { salvar, obter, limpar } from './core/estado.js';
 import { Palco } from './core/palco.js';
 import { Grafico } from './core/grafico.js';
+import { Avatar } from './components/avatar/avatar.js';
 
 // ─── Registro de simulações ────────────────────────────────
 import OscSimples    from './simulacoes/oscilador_simples.js';
@@ -65,6 +66,9 @@ const grafico = new Grafico({
 
 // ─── Estado global ─────────────────────────────────────────
 let simAtual = null;
+
+// ─── Avatar falante (Lia) ──────────────────────────────────
+const avatar = new Avatar();
 
 // ─── Sidebar ───────────────────────────────────────────────
 function construirSidebar() {
@@ -180,6 +184,7 @@ async function enviarPergunta() {
     try {
         const r = await perguntarTutor(txt, simAtual.id, params);
         _adicionarMensagem('ia', r.resposta);
+        avatar.falarResposta(r.resposta);
     } catch {
         _adicionarMensagem('ia', 'Erro na conexão com o Monitor Virtual.', true);
     }
@@ -283,6 +288,7 @@ function _salvarEstado(id) {
 elBtnIniciar.addEventListener('click', iniciarSimulacao);
 elBtnReiniciar.addEventListener('click', reiniciarSimulacao);
 elBtnEnviar.addEventListener('click', enviarPergunta);
+document.getElementById('btn-iniciar-lab')?.addEventListener('click', () => avatar.apresentar());
 elPerguntaInput.addEventListener('keypress', e => { if (e.key === 'Enter') enviarPergunta(); });
 
 // ─── Inicialização ─────────────────────────────────────────
