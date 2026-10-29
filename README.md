@@ -47,7 +47,7 @@ sincronizados à fala (boca, sobrancelhas, pescoço e braços).
 | Aplicação | `frontend/js/components/avatar/avatar.js` | Orquestra voz, animação, legendas e painel "Sobre a IA" |
 | Estilo | `frontend/css/avatar.css` | Visual do componente |
 
-- Selo **"Avatar gerado por IA"** e painel *Sobre a IA* sempre visíveis.
+- Painel *Sobre a IA* (botão "i") com as tecnologias usadas no projeto.
 - Legendas palavra a palavra (acessibilidade) e respeito a `prefers-reduced-motion`.
 - O avatar também lê em voz alta as respostas do Monitor Virtual (opcional).
 - Para trocar o provedor de voz (HeyGen, D-ID, ElevenLabs…), basta reimplementar `SinteseVoz`.

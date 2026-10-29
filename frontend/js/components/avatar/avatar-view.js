@@ -9,7 +9,7 @@
  */
 
 const SVG = `
-<svg class="av-svg" viewBox="0 0 200 240" role="img" aria-label="Avatar robô Lia, gerado por inteligência artificial">
+<svg class="av-svg" viewBox="0 0 200 240" role="img" aria-label="Avatar robô Lia">
   <defs>
     <linearGradient id="av-g-corpo" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#2a2a33"/><stop offset="1" stop-color="#17171c"/>

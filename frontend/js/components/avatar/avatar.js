@@ -124,7 +124,7 @@ export class Avatar {
         const raiz = document.createElement('aside');
         raiz.className = 'av-widget av-minimizado';
         raiz.id = 'avatar-widget';
-        raiz.setAttribute('aria-label', `Avatar ${NOME_AVATAR} — assistente virtual com inteligência artificial`);
+        raiz.setAttribute('aria-label', `Avatar ${NOME_AVATAR} — assistente virtual`);
 
         const tecnologias = TECNOLOGIAS_IA
             .map(t => `<li><strong>${t.titulo}</strong><span>${t.descricao}</span></li>`).join('');
@@ -132,17 +132,13 @@ export class Avatar {
         raiz.innerHTML = `
             <button class="av-fab" id="av-btn-abrir" type="button" title="Abrir avatar ${NOME_AVATAR}" aria-label="Abrir avatar ${NOME_AVATAR}">
                 <svg class="av-fab-icone" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="16" y1="3" x2="16" y2="7"/><circle cx="16" cy="3" r="1.4" fill="currentColor"/><rect x="6" y="7" width="20" height="17" rx="6"/><circle cx="12" cy="15" r="1.8" fill="currentColor"/><circle cx="20" cy="15" r="1.8" fill="currentColor"/><path d="M12 20h8"/></svg>
-                <span class="av-fab-selo">IA</span>
             </button>
 
             <div class="av-painel" role="dialog" aria-label="Avatar ${NOME_AVATAR}">
                 <header class="av-topo">
                     <div class="av-identidade">
                         <span class="av-nome">${NOME_AVATAR}</span>
-                        <span class="av-selo" title="Este avatar foi gerado com inteligência artificial">
-                            <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0l1.8 5.2L15 7l-5.2 1.8L8 14l-1.8-5.2L1 7l5.2-1.8z"/></svg>
-                            Avatar gerado por IA
-                        </span>
+                        <span class="av-selo">Assistente virtual</span>
                     </div>
                     <div class="av-topo-acoes">
                         <button class="av-icone" id="av-btn-info" type="button" title="Sobre a IA neste projeto" aria-label="Sobre a IA neste projeto">i</button>

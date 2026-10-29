@@ -13,11 +13,10 @@ export const APRESENTACAO =
     'Aplicados ao Ensino de Ciências Exatas e às Engenharias e utilização de ' +
     'Inteligência Artificial no Processo Ensino-Aprendizagem. Seja Bem Vindo!';
 
-/** Complemento que deixa explícito o uso de IA no projeto. */
+/** Fala complementar de boas-vindas. */
 export const TRANSPARENCIA_IA =
-    `Eu sou a ${NOME_AVATAR}, um avatar virtual criado com inteligência artificial. ` +
-    'Minha voz é gerada por síntese de fala neural, e o Monitor Virtual responde ' +
-    'suas dúvidas usando processamento de linguagem natural.';
+    `Eu sou a ${NOME_AVATAR}, sua assistente neste laboratório. ` +
+    'Escolha uma simulação no menu ao lado e, se tiver dúvidas, pergunte ao Monitor Virtual.';
 
 /** Fala completa da apresentação inicial. */
 export const APRESENTACAO_COMPLETA = `${APRESENTACAO} ${TRANSPARENCIA_IA}`;
